@@ -12,8 +12,9 @@
                 <i class="fas fa-heart fa-sm"></i></button></li>
 
             <li class="list-inline-item">
-                <button class="btn btn-info btn-sm buton-boyut">
-                <i class="fas fa-envelope fa-sm"></i></button></li>
+                <button routerLink='/members/{{member.username}}' [queryParams]='{tab: 3}'
+                class="btn btn-info btn-sm buton-boyut"> <i class="fas fa-envelope fa-sm"></i></button></li>
+
         </ul>
     </div>
     <div class="card-body p-1">
