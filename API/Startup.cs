@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using API.Data;
 using API.Extensions;
-using API.Extentions;
 using API.Interfaces;
 using API.Middleware;
 using API.Services;
@@ -38,7 +37,7 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAplicationServices(_config);
+            services.AddApplicationServices(_config);
             services.AddControllers();
             services.AddSwaggerGen(c =>{ c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });}); //?
             services.AddCors();
