@@ -40,7 +40,7 @@ namespace API.Controllers
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
 
-            if (!result.Succeeded) return BadRequest(result.Errors);
+            if (!result.Succeeded) return BadRequest("Make sure your password contains uppercase letters and numbers");
 
             var roleResult = await _userManager.AddToRoleAsync(user, "Member");
 
